@@ -1,0 +1,841 @@
+fileFormatVersion: 2
+guid: 7eed7f4b4d2e5424cb0824f44170f1e0
+timeCreated: 1440496893
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Water_Nuderose_1
+    21300002: Water_Sharp
+    21300004: tileset01_2
+    21300006: tileset01_3
+    21300008: tileset01_4
+    21300010: tileset01_5
+    21300012: tileset01_6
+    21300014: Tree_6
+    21300016: tileset01_8
+    21300018: tileset01_9
+    21300020: tileset01_10
+    21300022: tileset01_11
+    21300024: tileset01_12
+    21300026: tileset01_13
+    21300028: tileset01_14
+    21300030: tileset01_15
+    21300032: tileset01_16
+    21300034: tileset01_17
+    21300036: tileset01_18
+    21300038: tileset01_19
+    21300040: tileset01_20
+    21300042: tileset01_21
+    21300044: tileset01_22
+    21300046: tileset01_23
+    21300048: tileset01_24
+    21300050: tileset01_25
+    21300052: tileset01_26
+    21300054: tileset01_27
+    21300056: tileset01_28
+    21300058: tileset01_29
+    21300060: tileset01_30
+    21300062: tileset01_31
+    21300064: Water1
+    21300066: tileset01_33
+    21300068: tileset01_34
+    21300070: tileset01_35
+    21300072: tileset01_36
+    21300074: tileset01_37
+    21300076: Tree_3
+    21300078: tileset01_39
+    21300080: tileset01_40
+    21300082: tileset01_41
+    21300084: tileset01_42
+    21300086: tileset01_43
+    21300088: tileset01_44
+    21300090: tileset01_45
+    21300092: tileset01_46
+    21300094: tileset01_47
+    21300096: tileset01_48
+    21300098: tileset01_49
+    21300100: tileset01_50
+    21300102: tileset01_51
+    21300104: Water2
+    21300106: tileset01_53
+    21300108: Fire_1
+    21300110: Fire_2
+    21300112: Fire_3
+    21300114: Fire_4
+    21300116: tileset01_58
+    21300118: Tree_5
+    21300120: Tree_2
+    21300122: tileset01_61
+    21300124: Statue_Head
+    21300126: tileset01_63
+    21300128: tileset01_64
+    21300130: tileset01_65
+    21300132: Water3
+    21300134: tileset01_67
+    21300136: tileset01_68
+    21300138: Tree_1
+    21300140: tileset01_70
+    21300142: tileset01_71
+    21300144: tileset01_72
+    21300146: tileset01_73
+    21300148: tileset01_74
+    21300150: Tree_Cactus_1
+    21300152: tileset01_76
+    21300154: tileset01_77
+    21300156: Tree_Cactus_4
+    21300158: tileset01_79
+    21300160: tileset01_80
+    21300162: tileset01_81
+    21300164: tileset01_82
+    21300166: tileset01_83
+    21300168: tileset01_84
+    21300170: tileset01_85
+    21300172: tileset01_86
+    21300174: tileset01_87
+    21300176: Water_Nuderose_2
+    21300178: Water_Stone1
+    21300180: Water_Stone2
+    21300182: Tree_4
+    21300184: Leaves_1
+    21300186: Tree_Cactus_2
+    21300188: Tree_Cactus_3
+    21300190: Mushroom_1
+    21300192: Mushroom_2
+    21300194: Leaves_2
+    21300196: Rocks_1
+    21300198: Rocks_2
+    21300200: Rocks_3
+    21300202: Rocks_4
+    21300204: Rocks_5
+    21300206: Rocks_6
+    21300208: Rocks_Brown_1
+    21300210: Rocks_Brown_2
+    21300212: Rocks_Brown_3
+    21300214: Rocks_Brown_4
+    21300216: Rocks_Brown_5
+    21300218: Rocks_Brown_6
+    21300220: Seastar
+    21300222: Seashell
+    21300224: Turnip
+    21300226: Stump
+    21300228: Grass_3
+    21300230: Grass_2
+    21300232: Grass_1
+    21300234: Grass_4
+    21300236: Grass_5
+    21300238: Floor_5
+    21300240: Gate
+    21300242: Wall_Top_Left
+    21300244: Wall_Top_Right
+    21300246: Wall_Top_Center_1
+    21300248: Wall_Center_Left
+    21300250: Wall_Center_Right
+    21300252: Wall_Right_Low
+    21300254: Wall_Left_Low
+    21300256: Wall_Low_Center
+    21300258: Wall_Top_Center_2
+    21300260: Floor_1
+    21300262: Floor_2
+    21300264: Floor_3
+    21300266: Floor_4
+    21300268: ShoreTile
+    21300270: WaterTile
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Water_Sharp
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 586
+        width: 24
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree_6
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 488
+        width: 63
+        height: 147
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 459
+        width: 115
+        height: 111
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree_3
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 453
+        width: 126
+        height: 116
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 331
+        width: 115
+        height: 111
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fire_1
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 395
+        width: 27
+        height: 50
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fire_2
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 395
+        width: 26
+        height: 50
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fire_3
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 395
+        width: 26
+        height: 50
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fire_4
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 395
+        width: 26
+        height: 50
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree_5
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 355
+        width: 60
+        height: 90
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree_2
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 325
+        width: 95
+        height: 117
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Statue_Head
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 295
+        width: 54
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 203
+        width: 115
+        height: 111
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree_1
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 197
+        width: 95
+        height: 117
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree_Cactus_1
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 134
+        width: 60
+        height: 87
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree_Cactus_4
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 133
+        width: 47
+        height: 58
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water_Nuderose_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 612
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water_Nuderose_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 609
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water_Stone1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 617
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water_Stone2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 582
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree_4
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 229
+        width: 96
+        height: 120
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Leaves_1
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 578
+        width: 63
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree_Cactus_2
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 165
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree_Cactus_3
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 130
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mushroom_1
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 162
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mushroom_2
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 130
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Leaves_2
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 580
+        width: 62
+        height: 57
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_1
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 610
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 613
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 610
+        width: 63
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_4
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 546
+        width: 61
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_5
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 547
+        width: 58
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_6
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 546
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_Brown_1
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 514
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_Brown_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 517
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_Brown_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 514
+        width: 63
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_Brown_4
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 450
+        width: 61
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_Brown_5
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 451
+        width: 58
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rocks_Brown_6
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 450
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Seastar
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 451
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Seashell
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 454
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turnip
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 388
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stump
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 76
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Grass_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Grass_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Grass_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Grass_4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Grass_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Floor_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gate
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 2
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall_Top_Left
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall_Top_Right
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 64
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall_Top_Center_1
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall_Center_Left
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall_Center_Right
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 32
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall_Right_Low
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall_Left_Low
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall_Low_Center
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall_Top_Center_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Floor_1
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Floor_2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Floor_3
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Floor_4
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShoreTile
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 541
+        width: 1
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WaterTile
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 539
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
