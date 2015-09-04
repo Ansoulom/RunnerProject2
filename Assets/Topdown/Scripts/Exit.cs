@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Exit : MonoBehaviour {
 
 	public Image fadeToBlackSprite;
-	private bool doFade = false;
+	private bool doFade = true;
 
 	IEnumerator OnTriggerEnter2D (Collider2D other) {
 		if(other.CompareTag("Player")) {
@@ -13,8 +13,11 @@ public class Exit : MonoBehaviour {
 
 			yield return new WaitForSeconds(0.5f);
 
+			if(doFade) {
+				fadeToBlackSprite.gameObject.SetActive(true);
+			}
 			// Ska vi sätta igång faden? Det finns en bool för det.
-
+			//TODO FIX STUFF
 			// fadeToBlackSprite.gameObject bör aktiveras här.
 
 			yield return new WaitForSeconds(2f);

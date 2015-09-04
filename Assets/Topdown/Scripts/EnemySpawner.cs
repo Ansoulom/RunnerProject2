@@ -6,13 +6,14 @@ public class EnemySpawner : MonoBehaviour {
 	public GameObject objectToSpawn;
 
 	public float spawnRate = 2f;
+	public int amountOfSkeletons = 4;
 
 	// Skapar vi en publik variabel, int, som t.ex. kan kallas för amountOfSkeletons så kan speldesignern sätta antalet skelett för varje EnemySpawner direkt i inspectorn.
 
 	IEnumerator Start () {
-		for(int i = 0; i<0; i++){ // Istället för i<0 kanske man kan använda den ovan deklarerade amountOfSkeletons.
+		for(int i = 0; i<this.amountOfSkeletons; i++){ // Istället för i<0 kanske man kan använda den ovan deklarerade amountOfSkeletons.
 			Spawn ();
-			yield return new WaitForSeconds(100f); // Fanns det inte en variabel som hanterade rate of spawn?
+			yield return new WaitForSeconds(this.spawnRate); // Fanns det inte en variabel som hanterade rate of spawn?
 		}
 	}
 	

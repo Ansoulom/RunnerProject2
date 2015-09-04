@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class PlayerVariables : MonoBehaviour {
 
-	private float health = 100f;
-	private float damageTimer = 1f;
-	private Slider healthSlider;
+	public float health = 100f;
+	public float damageTimer = 1f;
+	public Slider healthSlider;
 
-	private int level = 1;
-	private int experience = 0;
+	public int level = 1;
+	public int experience = 0;
 
 	void Start () {
 		healthSlider = GameObject.Find("HealthSliderUI").GetComponent<Slider>();
@@ -17,20 +17,28 @@ public class PlayerVariables : MonoBehaviour {
 	
 	void Update () {
 		// damageTimer bör öka med tiden som gått från senaste uppdate-loopen. Tiden räknas ut med Time.deltaTime;
+		this.damageTimer += Time.deltaTime;
 
 		healthSlider.value = Mathf.Lerp(healthSlider.value, health, Time.deltaTime);
 		if(experience > level * level * 100){
 
 			// När experience når över den mattematiska formeln i if-satsen bör vi öka level.
+			this.level++;
 		
 		}
 	}
 
 	public void Harm(float dmg){
-
+		if (this.damageTimer > 1) {
+			this.health -= dmg;
+			this.damageTimer = 0;
+		}
 		// Om damageTimer är större än en sekund bör vi sänka health med damage. Vi bör även sätta damageTimer till 0f för att nollställa timern.
-		
-		// Om health är mindre än 1f så bör vi starta funktionen Die(). Det kan bara göras med StartCoroutine eftersom Die() är en IEnumerator.
+
+		if (this.health < 1) {
+			StartCoroutine(Die ());
+		}
+			// Om health är mindre än 1f så bör vi starta funktionen Die(). Det kan bara göras med StartCoroutine eftersom Die() är en IEnumerator.
 
 	}
 
@@ -42,6 +50,8 @@ public class PlayerVariables : MonoBehaviour {
 		yield return new WaitForSeconds(2f);
 
 		// Här bör en ny level laddas eller en icke implementerad Respawn() funktion kallas på. 
+		Application.LoadLevel (0);
+		//TODO FIX THIS
 
 	}
 }

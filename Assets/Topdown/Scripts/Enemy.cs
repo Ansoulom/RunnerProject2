@@ -9,11 +9,12 @@ public class Enemy : MonoBehaviour {
 	public float speed = 0.2f;
 	public float damage = 25f;
 	public int health = 100;
-	private int startHealth;
+	private int startHealth = 100;
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player").transform;
 		anim = GetComponent<Animator>();
+
 
 		// När skelettet dör använder vi dess health som experience-points för spelaren. Men när skelettet har dött är ju detta 0...! 
 		// Vi borde därför sätta den redan deklarerade variabeln för start-hälsan till att vara det health är i Start-funktionen. 
@@ -31,7 +32,7 @@ public class Enemy : MonoBehaviour {
 			float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
 			transform.rotation = Quaternion.Euler(0f, 0f, rot_z + 90);
 
-			transform.Translate(Vector3.down*0f*Time.deltaTime); // Vilken hastighet ska detta skelett skutta fram med?
+			transform.Translate(Vector3.down*speed*Time.deltaTime); // Vilken hastighet ska detta skelett skutta fram med?
 
 			anim.SetFloat("Speed",1f);
 		}
@@ -44,19 +45,23 @@ public class Enemy : MonoBehaviour {
 		Vector3 diff = player.position - transform.position;
 		diff.Normalize ();
 		// Den här funktionen gör ingenting om den inte skickar tillbaka värdet som deklareras här ovan.
+		return diff;
 	}
 
 	public void Harm(int dmg){
 
 		// health bör minska med skadan som denna funktion tar. 
+		this.health -= dmg;
 		
 		if(health<1f){
 			int score = PlayerPrefs.GetInt("SP1GameScore");
 			// score är variabeln som spelet sparat i minnet. Öka detta med lämpligt värde innan det sätts i minnet igen.
+			score++;
 			PlayerPrefs.SetInt("SP1GameScore", score);
 
 			player.gameObject.GetComponent<PlayerVariables>().experience += startHealth;
 
+			Destroy(this.gameObject);
 			// Att bara ta bort det här objektet går bra när skelettet dör. Men annars kanske man köra StartCoroutine(Die ()); och hitta på något annat snyggt.
 		}
 	}
@@ -66,6 +71,7 @@ public class Enemy : MonoBehaviour {
 			//Move harm timer here so multiple enemies can harm player at the same time?
 
 			// Leta upp komponenten PlayerVariables på det kolliderade objektet och kalla på funktionen Harm(float) med skadan som fienden gör.
+			other.GetComponent<PlayerVariables>().Harm(damage);
 		}
 	}
 }

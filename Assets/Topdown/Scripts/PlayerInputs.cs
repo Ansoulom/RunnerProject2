@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerInputs : MonoBehaviour {
 
 	// Vi bör skapa ett privat decimaltal som håller koll på hur fort man skjuter. Ett värde av 0.2f fungerade bra. 
+	private float shootSpeed = 0.01f;
 
 	public GameObject fireBall;
 	public GameObject frostBall;
@@ -21,9 +22,10 @@ public class PlayerInputs : MonoBehaviour {
 	}
 
 	void Update () {
-		vertical = Input.GetAxis("Vertical");
 		horizontal = Input.GetAxis("Horizontal");
-		transform.Translate(new Vector3(0,0,0)*Time.deltaTime, Camera.main.transform); // Varför kan karaktären inte röra sig i X- och Y-led när vi har tagit fram två variabler för det två rader upp?
+		vertical = Input.GetAxis("Vertical");
+
+		transform.Translate(new Vector3(horizontal,vertical,0)*Time.deltaTime, Camera.main.transform); // Varför kan karaktären inte röra sig i X- och Y-led när vi har tagit fram två variabler för det två rader upp?
 		
 		float speed = Mathf.Abs(vertical) + Mathf.Abs(horizontal);
 		anim.SetFloat("Speed",speed);
@@ -34,15 +36,16 @@ public class PlayerInputs : MonoBehaviour {
 		transform.rotation = Quaternion.Euler (0f, 0f, rot_z + 90);
 
 		shootTimer += Time.deltaTime;
-		if(Input.GetButton("Fire1") && shootTimer > 100f){ // Vi bör ändra så man inte bara kan skjuta var 100e sekund.
+		if(Input.GetButton("Fire1") && shootTimer > shootSpeed){ // Vi bör ändra så man inte bara kan skjuta var 100e sekund.
 			// Eld var det här!
+			Fire();
 		}
 		
 		if(Input.GetKeyDown(KeyCode.Alpha1)){
 			activeWeapon = 0;
 		}
 		if(Input.GetKeyDown(KeyCode.Alpha2) && GetComponent<PlayerVariables>().level>1){
-			activeWeapon = 0;
+			activeWeapon = 1;
 		}
 	}
 
@@ -50,6 +53,7 @@ public class PlayerInputs : MonoBehaviour {
 		Vector3 diff = Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position;
 		diff.Normalize ();
 		// Den här funktionen gör ingenting om den inte skickar tillbaka värdet som deklareras här ovan.
+		return diff;
 	}
 
 	void Fire () {
