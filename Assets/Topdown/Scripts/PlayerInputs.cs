@@ -4,7 +4,14 @@ using System.Collections;
 public class PlayerInputs : MonoBehaviour {
 
 	// Vi bör skapa ett privat decimaltal som håller koll på hur fort man skjuter. Ett värde av 0.2f fungerade bra. 
-	private float shootSpeed = 0.01f;
+	private float shootSpeed = 0.5f;
+	private Vector2 speed;
+	
+	private bool boosting;
+	private Vector2 boostVelocity;
+	private float boostSpeed;
+	private float boostTime;
+	private float boostTimer;
 
 	public GameObject fireBall;
 	public GameObject frostBall;
@@ -19,11 +26,29 @@ public class PlayerInputs : MonoBehaviour {
 
 	void Start () {
 		anim = GetComponent<Animator>();
+		this.speed = new Vector2 (3, 3);
+		this.boosting = false;
+		this.boostSpeed = 8;
+		this.boostTime = 0.3f;
 	}
 
-	void Update () {
-		horizontal = Input.GetAxis("Horizontal");
-		vertical = Input.GetAxis("Vertical");
+	/*void FixedUpdate() {
+		
+	}*/
+
+	void FixedUpdate () {
+		if (!this.boosting) {
+			horizontal = this.speed.x * Input.GetAxis ("Horizontal");
+			vertical = this.speed.y * Input.GetAxis ("Vertical");
+		} else {
+			horizontal = boostVelocity.x;
+			vertical = boostVelocity.y;
+			boostTimer += Time.deltaTime;
+			if (this.boostTimer >= boostTime) {
+				this.boosting = false;
+				this.boostTimer = 0;
+			}
+		}
 
 		transform.Translate(new Vector3(horizontal,vertical,0)*Time.deltaTime, Camera.main.transform); // Varför kan karaktären inte röra sig i X- och Y-led när vi har tagit fram två variabler för det två rader upp?
 		
@@ -40,6 +65,12 @@ public class PlayerInputs : MonoBehaviour {
 			// Eld var det här!
 			Fire();
 		}
+		if (Input.GetButton("Fire2") && boostTimer == 0) {
+			this.boosting = true;
+			print (diff.magnitude);
+			this.boostVelocity = new Vector2(diff.x * this.boostSpeed, diff.y * this.boostSpeed);
+			this.boostTimer = 0;
+		}
 		
 		if(Input.GetKeyDown(KeyCode.Alpha1)){
 			activeWeapon = 0;
@@ -51,6 +82,7 @@ public class PlayerInputs : MonoBehaviour {
 
 	Vector3 DirectionVector () {
 		Vector3 diff = Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position;
+		diff.z = 0;
 		diff.Normalize ();
 		// Den här funktionen gör ingenting om den inte skickar tillbaka värdet som deklareras här ovan.
 		return diff;

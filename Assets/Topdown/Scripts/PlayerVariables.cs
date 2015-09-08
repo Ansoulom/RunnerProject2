@@ -8,7 +8,7 @@ public class PlayerVariables : MonoBehaviour {
 	public float damageTimer = 1f;
 	public Slider healthSlider;
 
-	public int level = 1;
+	public int level = 2;
 	public int experience = 0;
 
 	void Start () {
