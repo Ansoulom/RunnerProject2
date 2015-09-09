@@ -12,6 +12,8 @@ public class PlayerInputs : MonoBehaviour {
 	private float boostSpeed;
 	private float boostTime;
 	private float boostTimer;
+	private float boostCost;
+	private float rechargeRate;
 
 	public GameObject fireBall;
 	public GameObject frostBall;
@@ -30,6 +32,8 @@ public class PlayerInputs : MonoBehaviour {
 		this.boosting = false;
 		this.boostSpeed = 8;
 		this.boostTime = 0.3f;
+		this.boostCost = 40;
+		this.rechargeRate = 2;
 	}
 
 	/*void FixedUpdate() {
@@ -59,17 +63,22 @@ public class PlayerInputs : MonoBehaviour {
 		var diff = DirectionVector ();
 		float rot_z = Mathf.Atan2 (diff.y, diff.x) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.Euler (0f, 0f, rot_z + 90);
+		if (!this.boosting) {
+			GameObject.FindGameObjectWithTag ("Pointer").transform.rotation = this.transform.rotation;
+			GameObject.FindGameObjectWithTag ("Pointer").transform.position = this.transform.position;
+		}
 
 		shootTimer += Time.deltaTime;
 		if(Input.GetButton("Fire1") && shootTimer > shootSpeed){ // Vi bör ändra så man inte bara kan skjuta var 100e sekund.
 			// Eld var det här!
 			Fire();
 		}
-		if (Input.GetButton("Fire2") && boostTimer == 0) {
+		if (Input.GetButton("Fire2") && boostTimer == 0 && this.gameObject.GetComponent<PlayerVariables>().stamina >= this.boostCost) {
 			this.boosting = true;
 			print (diff.magnitude);
 			this.boostVelocity = new Vector2(diff.x * this.boostSpeed, diff.y * this.boostSpeed);
 			this.boostTimer = 0;
+			this.gameObject.GetComponent<PlayerVariables>().stamina -= this.boostCost;
 		}
 		
 		if(Input.GetKeyDown(KeyCode.Alpha1)){
@@ -78,10 +87,13 @@ public class PlayerInputs : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Alpha2) && GetComponent<PlayerVariables>().level>1){
 			activeWeapon = 1;
 		}
+		this.gameObject.GetComponent<PlayerVariables> ().stamina += this.rechargeRate * Time.deltaTime;
 	}
 
 	Vector3 DirectionVector () {
 		Vector3 diff = Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position;
+		if (diff.y < 0)
+			diff.y = 0;
 		diff.z = 0;
 		diff.Normalize ();
 		// Den här funktionen gör ingenting om den inte skickar tillbaka värdet som deklareras här ovan.
@@ -95,7 +107,7 @@ public class PlayerInputs : MonoBehaviour {
 
 		if(activeWeapon==0){
 			projectileInstance = (GameObject)Instantiate(fireBall,transform.position,transform.rotation);
-			projectileInstance.GetComponent<Rigidbody2D>().velocity = -projectileInstance.transform.up * 2f;
+			projectileInstance.GetComponent<Rigidbody2D>().velocity = -projectileInstance.transform.up * 5f;
 			projectileInstance.GetComponent<Projectile>().damage *= GetComponent<PlayerVariables>().level;
 		}
 		else {

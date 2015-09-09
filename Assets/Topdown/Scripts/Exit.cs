@@ -20,7 +20,7 @@ public class Exit : MonoBehaviour {
 
 			yield return new WaitForSeconds(2f);
 			
-			Application.LoadLevel (0);
+			Application.LoadLevel (1);
 		}
 	}
 

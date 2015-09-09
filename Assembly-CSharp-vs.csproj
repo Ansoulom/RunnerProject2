@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Topdown\Scripts\Buttons.cs" />
      <Compile Include="Assets\Topdown\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Topdown\Scripts\Enemy.cs" />
      <Compile Include="Assets\Topdown\Scripts\EnemySpawner.cs" />
