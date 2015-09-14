@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class PlayerVariables : MonoBehaviour {
 
 	public float health = 100f;
-	public float stamina;
+	public float maxHealth;
+	public float stamina, maxStamina;
 	public float damageTimer = 1f;
 	public Slider healthSlider, staminaSlider;
 
@@ -15,7 +16,9 @@ public class PlayerVariables : MonoBehaviour {
 	void Start () {
 		healthSlider = GameObject.Find("HealthSliderUI").GetComponent<Slider>();
 		this.staminaSlider = GameObject.Find ("StaminaSliderUI").GetComponent<Slider> ();
-		this.stamina = 100f;
+		this.maxStamina = 100f;
+		this.maxHealth = 100;
+		this.stamina = this.maxStamina;
 	}
 	
 	void Update () {
@@ -33,14 +36,16 @@ public class PlayerVariables : MonoBehaviour {
 	}
 
 	public void Harm(float dmg){
-		if (this.damageTimer > 1) {
-			this.health -= dmg;
-			this.damageTimer = 0;
-		}
-		// Om damageTimer är större än en sekund bör vi sänka health med damage. Vi bör även sätta damageTimer till 0f för att nollställa timern.
+		if (!this.gameObject.GetComponent<PlayerInputs> ().boosting) {
+			if (this.damageTimer > 1) {
+				this.health -= dmg;
+				this.damageTimer = 0;
+			}
+			// Om damageTimer är större än en sekund bör vi sänka health med damage. Vi bör även sätta damageTimer till 0f för att nollställa timern.
 
-		if (this.health < 0) {
-			StartCoroutine(Die ());
+			if (this.health < 0) {
+				StartCoroutine (Die ());
+			}
 		}
 			// Om health är mindre än 1f så bör vi starta funktionen Die(). Det kan bara göras med StartCoroutine eftersom Die() är en IEnumerator.
 

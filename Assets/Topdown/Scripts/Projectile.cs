@@ -22,9 +22,11 @@ public class Projectile : MonoBehaviour {
 
 			// Kolliderar detta objekt med ett objekt som har komponenten Enemy så bör vi kalla på dess Harm(float) funktion.
 			other.GetComponent<Enemy>().Harm(this.damage);
-
+			Destroy (gameObject);
+		}
+		else if (other.CompareTag("Wall")) {
+			Destroy(gameObject);
 		}
 
-		Destroy (gameObject);
 	}
 }

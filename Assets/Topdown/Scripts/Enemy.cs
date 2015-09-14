@@ -6,10 +6,13 @@ public class Enemy : MonoBehaviour {
 	private Transform player;
 	private Animator anim;
 
-	public float speed = 0.2f;
+	public float speed = 20f;
 	public float damage = 25f;
 	public int health = 100;
 	private int startHealth = 100;
+
+	public GameObject staminaRestore;
+	public GameObject healthRestore;
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -27,7 +30,7 @@ public class Enemy : MonoBehaviour {
 		if(distance<0.3f){
 			//Stand still
 		}
-		else if(distance<2f){
+		else if(distance<3.4f){
 			var diff = DirectionVector ();
 			float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
 			transform.rotation = Quaternion.Euler(0f, 0f, rot_z + 90);
@@ -61,9 +64,21 @@ public class Enemy : MonoBehaviour {
 
 			player.gameObject.GetComponent<PlayerVariables>().experience += startHealth;
 
-			Destroy(this.gameObject);
+			StartCoroutine(Die ());
 			// Att bara ta bort det här objektet går bra när skelettet dör. Men annars kanske man köra StartCoroutine(Die ()); och hitta på något annat snyggt.
 		}
+	}
+
+	IEnumerator Die() {
+		yield return new WaitForSeconds(0);
+		Destroy (this.gameObject);
+		if (Random.value < 0.5f) {
+			GameObject staminaInstance = (GameObject)Instantiate(this.staminaRestore,transform.position,transform.rotation);
+		}
+		else if (Random.value <= 1) {
+			GameObject healthInstance = (GameObject)Instantiate(this.healthRestore,transform.position,transform.rotation);
+		}
+
 	}
 
 	void OnTriggerStay2D(Collider2D other){

@@ -46,16 +46,19 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Items.cs" />
      <Compile Include="Assets\Topdown\Scripts\Buttons.cs" />
      <Compile Include="Assets\Topdown\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Topdown\Scripts\Enemy.cs" />
      <Compile Include="Assets\Topdown\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Topdown\Scripts\Exit.cs" />
+     <Compile Include="Assets\Topdown\Scripts\HealthUp.cs" />
      <Compile Include="Assets\Topdown\Scripts\Lock.cs" />
      <Compile Include="Assets\Topdown\Scripts\PlayerInputs.cs" />
      <Compile Include="Assets\Topdown\Scripts\PlayerVariables.cs" />
      <Compile Include="Assets\Topdown\Scripts\Projectile.cs" />
      <Compile Include="Assets\Topdown\Scripts\Rotate.cs" />
+     <Compile Include="Assets\Topdown\Scripts\StaminaUp.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Sidescroll\Sprites\license.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

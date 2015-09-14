@@ -17,7 +17,7 @@ GameObject:
   - 20: {fileID: 2002858}
   m_Layer: 0
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,9 +138,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 026d2cc987c9d2a4dbe2016a089700a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .200000003
+  speed: 1.60000002
   damage: 25
-  health: 100
+  health: 30
+  staminaRestore: {fileID: 180974, guid: dc35d1f930524db43958e601954a4939, type: 2}
+  healthRestore: {fileID: 180974, guid: 8b42e7bf30aced6419dfa91fbda47e08, type: 2}
 --- !u!212 &21236306
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -186,6 +188,30 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 1.60000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: health
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_HDR
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: staminaRestore
+      value: 
+      objectReference: {fileID: 180974, guid: dc35d1f930524db43958e601954a4939, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: healthRestore
+      value: 
+      objectReference: {fileID: 180974, guid: 8b42e7bf30aced6419dfa91fbda47e08, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 170220}
